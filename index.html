@@ -55,58 +55,100 @@
                     </nav>
                     <!-- End of Topbar -->
                     <!-- Begin Page Content -->
-                    <div class="container-fluid">
-                        <!-- Page Heading -->
-                        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 class="h3 mb-0 text-gray-800">Таск</h1>
-                            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                                <i class="fas fa-undo fa-sm text-white-50"></i>
-                                Оновити
+                    <form id="anketaform" name="anketaform" method="POST" action="/cgi-bin/agentgettarget.pl?14&8">
+                        <div class="container-fluid">
+                            <!-- Page Heading -->
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Таск</h1>
+                                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                                    <i class="fas fa-undo fa-sm text-white-50"></i>
+                                    Оновити
+
 						
-                            </a>
-                        </div>
-                        <!-- Content Row -->
-                        <div class="row"></div>
-                        <!-- Content Row -->
-                        <div class="row">
-                            <!-- Content Column -->
-                            <div class="col-lg-7 mb-4">
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <button name="action" class="btn btn-outline-danger" value="noanswer">НЕ ВІДПОВІВ</button>
-                                        <button name="action" class="btn btn-outline-danger" value="wrongnumber">НЕВІРНИЙ №</button>
-                                        <button name="action" class="btn btn-outline-danger" value="salfwrongname">НЕВІРНА АНКЕТА</button>
-                                        <button name="action" class="btn btn-outline-danger" value="noanswer_rc">ПІЗНІШЕ </button>
-                                        <button name="action" class="btn btn-outline-danger" value="double">ДУБЛЬ</button>
-                                        <button name="action" class="btn btn-outline-danger" value="liquidated">ЛІКВІДОВАНІ</button>
+                                
+                                </a>
+                            </div>
+                            <!-- Content Row -->
+                            <div class="row"></div>
+                            <!-- Content Row -->
+                            <div class="row">
+                                <!-- Content Column -->
+                                <div class="col-lg-7 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <button name="action" class="btn btn-outline-danger" value="noanswer">НЕ ВІДПОВІВ</button>
+                                            <button name="action" class="btn btn-outline-danger" value="wrongnumber">НЕВІРНИЙ №</button>
+                                            <button name="action" class="btn btn-outline-danger" value="salfwrongname">НЕВІРНА АНКЕТА</button>
+                                            <button name="action" class="btn btn-outline-danger" value="noanswer_rc">ПІЗНІШЕ </button>
+                                            <button name="action" class="btn btn-outline-danger" value="double">ДУБЛЬ</button>
+                                            <button name="action" class="btn btn-outline-danger" value="liquidated">ЛІКВІДОВАНІ</button>
+                                        </div>
+                                        <div class="card-body">
+                                            <p>
+                                                <label for="source">Джерело :</label>
+                                                <input id="source" name="source" size="50" type="text" required>
+                                            </p>
+                                            <p>
+                                                <label for="clientname">Назва Клієнта :</label>
+                                                <input id="clientname" name="clientname" size="50" type="text" required>
+                                                <span title="склад">
+                                                    <input type="text" readonly value=" склад" name="category" size="10">
+                                                </span>
+                                            </p>
+                                            <p>
+                                                <label for="clientaddr">Адреса Клієнта :</label>
+                                                <input id="clientaddr" name="clientaddr" size="50" type="text" required>
+                                            </p>
+                                            <p>
+                                                <label for="clientemail">E-mail Клієнта :</label>
+                                                <input id="clientemail" name="clientemail" size="50" type="text" placeholder="asdasfg@gmail.com" required>
+                                            </p>
+                                            <p>
+                                                <label for="clientphonetocheck">Тел. Клієнта :</label>
+                                                <input id="clientphonetocheck" name="clientphonetocheck" size="50" type="text" pattern="[0-9,]{12,}" placeholder="3806542833" required>
+                                            </p>
+                                            <p>
+                                                <label for="contactperson">Контакт. особа :</label>
+                                                <input id="contactperson" name="contactperson" size="50" type="text" required>
+                                            </p>
+
+                                            <div class="form-group"> 
+                                                <select class="custom-select">
+                                                <option  selected="" >Виберіть додаткову інформанцію</option>
+                                                <option id="noteselect1" value>Пропозиції роз...</option>
+                                                <option id="noteselect2" value>Зацікавляться ...</option>
+                                                <option id="noteselect3" value>Розмова з ОПР ...</option>
+                                                <option id="noteselect4" value>Спілкувались з </option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="card-body"></div>
+                                </div>
+                                <div class="col-lg-5 mb-4">
+                                    <!-- Illustrations -->
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Для нотатків
+									</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea form="anketaform" name="manager_comment" cols="68" rows="4" maxlength="240" placeholder="Власні нотатки"></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Approach -->
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <h6 class="m-0 font-weight-bold text-primary">Записи скріптів
+									</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea id="agent_script_note" cols="68" rows="6" readonly></textarea>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-5 mb-4">
-                                <!-- Illustrations -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Для нотатків
-									</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <textarea form="anketaform" name="manager_comment" cols="68" rows="4" maxlength="240" placeholder="Власні нотатки"></textarea>
-                                    </div>
-                                </div>
-                                <!-- Approach -->
-                                <div class="card shadow mb-4">
-                                    <div class="card-header py-3">
-                                        <h6 class="m-0 font-weight-bold text-primary">Записи скріптів
-									</h6>
-                                    </div>
-                                    <div class="card-body">
-                                        <textarea id="agent_script_note" cols="68" rows="6" readonly></textarea>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 <!-- End of Main Content -->
                 <!-- Footer -->
