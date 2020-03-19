@@ -34,17 +34,31 @@
                 </li>
                 <!-- Divider -->
                 <hr class="sidebar-divider"/>
-                <!-- Heading -->
-                <div class="sidebar-heading"> 
-		    	</div>
                 <li class="nav-item active">
                     <a class="nav-link">
+                        <i class="fas fa-envelope"></i>
                         <span style="font-size: 12pt"> Анкет - 0</span><br>
+                        <i class="fab fa-hotjar"></i>
                         <span style="font-size: 12pt"> Теплих - 0 </span><br>
-                        <span style="font-size: 12pt"> Зацікавлених - </span>
+                        <i class="fas fa-user-plus"></i>
+                        <span style="font-size: 12pt"> Зацікавлених - </span><br>
+                        <i class="fas fa-list"></i>
+                        <span style="font-size: 12pt"> Список продактів: - </span>
+                        <hr>
+                            <i class="fas fa-exchange-alt"></i>
+                            <span style="font-size: 12pt">Трансфери :</span>
+                            <hr>
+                        <button name="txaction" value="1004" type="button" class="btn btn-success">ТРАНСФЕР(1004)</button>
+                        <hr>
+                        <button name="txaction" value="1002" type="button" class="btn btn-success">ТРАНСФЕР(1002)</button>
+                        <hr>
+                        <button name="txaction" value="380322443132" type="button" class="btn btn-success">380322443132</button>
+                        <hr>
+                        <button name="txaction" value="380506677357" type="button" class="btn btn-success">380506677357</button>
                     </a>
                 </li>
                 <hr class="sidebar-divider d-none d-md-block"/>
+               
             </ul>
             <div id="content-wrapper" class="d-flex flex-column">
                 <div id="content">
@@ -55,7 +69,7 @@
                             <!-- Nav Item - User Information -->
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link dropdown-toggle" href="#" onclick="Main" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-sign-out-alt ">На Головну</i>
+                                    <i class="fas fa-sign-out-alt "> На Головну</i>
                                 </a>
                             </li>
                         </ul>
@@ -66,13 +80,10 @@
                         <div class="container-fluid">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h1 class="h3 mb-0 text-gray-800">Таск</h1>
+                                <h1 class="h3 mb-0 text-gray-800">Таск - 8</h1>
                                 <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                                     <i class="fas fa-undo fa-sm text-white-50"></i>
-                                    Оновити
-
-						
-                                
+                                    Оновити   
                                 </a>
                             </div>
                             <!-- Content Row -->
@@ -94,37 +105,39 @@
                                            <div class="main">                                        
                                             <div class="field">
                                                 <label for="source">Джерело :</label>
-                                                <input id="source" name="source" size="50" type="text" required>
+                                                <input id="source" name="source" size="60" type="text" required>
                                             </div>
                                             <div class="field">
                                                 <label for="clientname">Назва Клієнта :</label>
-                                                <input id="clientname" name="clientname" size="50" type="text" required>
+                                                <input id="clientname" name="clientname" size="60" type="text" required>
                                             </div>
                                             <div class="field">
                                                 <label for="clientaddr">Адреса Клієнта :</label>
-                                                <input id="clientaddr" name="clientaddr" size="50" type="text" required>
+                                                <input id="clientaddr" name="clientaddr" size="60" type="text" required>
                                             </div>
                                             <div class="field">
                                                 <label for="clientemail">E-mail Клієнта :</label>
-                                                <input id="clientemail" name="clientemail" size="50" type="text" placeholder="asdasfg@gmail.com" required>
+                                                <input id="clientemail" name="clientemail" size="60" type="text" placeholder="asdasfg@gmail.com" required>
                                             </div>
                                             <div class="field"> 
                                                 <label for="clientphonetocheck">Тел. Клієнта :</label>
-                                                <input id="clientphonetocheck" name="clientphonetocheck" size="50" type="text" pattern="[0-9,]{12,}" placeholder="3806542833" required>
+                                                <input id="clientphonetocheck" name="clientphonetocheck" size="60" type="text" pattern="[0-9,]{12,}" placeholder="3806542833" required>
                                             </div>
                                             <div class="field">
                                                 <label for="contactperson">Контакт. особа :</label>
-                                                <input id="contactperson" name="contactperson" size="50" type="text" required>
+                                                <input id="contactperson" name="contactperson" size="60" type="text" required>
                                             </div>
-
-                                            <div class="form-group"> 
-                                                <select class="custom-select">
-                                                <option  selected="" >Виберіть додаткову інформанцію</option>
-                                                <option id="noteselect1" value>Пропозиції роз...</option>
-                                                <option id="noteselect2" value>Зацікавляться ...</option>
-                                                <option id="noteselect3" value>Розмова з ОПР ...</option>
-                                                <option id="noteselect4" value>Спілкувались з </option>
-                                                </select>
+                                                <div class="form-group"> 
+                                                    <select class="custom-select">
+                                                    <option  selected="" >Виберіть додаткову інформанцію</option>
+                                                    <option id="noteselect1" value>Пропозиції роз...</option>
+                                                    <option id="noteselect2" value>Зацікавляться ...</option>
+                                                    <option id="noteselect3" value>Розмова з ОПР ...</option>
+                                                    <option id="noteselect4" value>Спілкувались з </option>
+                                                    </select>
+                                                </div>
+                                            <div >
+                                                <textarea name="entrynote" cols="80" rows="3" placeholder=""></textarea>
                                             </div>
                                         </div>
                                         </div> 
