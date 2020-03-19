@@ -7,3 +7,6 @@ label {
     padding:10px;}
 .main {
     float: left;}
+.anketa{
+    justify-content: space-around;
+}
