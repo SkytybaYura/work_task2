@@ -11,7 +11,7 @@
         <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/index.css">
     </head>
-    <body id="page-top">
+    <body class="container" id="page-top">
         <!-- Page Wrapper -->
         <div id="wrapper">
             <!-- Sidebar -->
@@ -46,7 +46,7 @@
                         <span style="font-size: 12pt">Зацікавлених - </span>
                         <br>
                         <i class="fas fa-list"></i>
-                        <span style="font-size: 12pt">Список продактів: - </span>
+                        <span style="font-size: 12pt">Список продактів - </span>
                         <hr>
                         <i class="fas fa-exchange-alt"></i>
                         <span style="font-size: 12pt">Трансфери :</span>
@@ -100,6 +100,7 @@
                                             <button name="action" class="btn btn-outline-danger" value="noanswer">НЕ ВІДПОВІВ</button>
                                             <button name="action" class="btn btn-outline-danger" value="wrongnumber">НЕВІРНИЙ №</button>
                                             <button name="action" class="btn btn-outline-danger" value="salfwrongname">НЕВІРНА АНКЕТА</button>
+                                            <hr>
                                             <button name="action" class="btn btn-outline-danger" value="noanswer_rc">ПІЗНІШЕ </button>
                                             <button name="action" class="btn btn-outline-danger" value="double">ДУБЛЬ</button>
                                             <button name="action" class="btn btn-outline-danger" value="liquidated">ЛІКВІДОВАНІ</button>
@@ -108,27 +109,27 @@
                                             <div class="main">
                                                 <div class="field">
                                                     <label for="source">Джерело :</label>
-                                                    <input id="source" name="source" size="60" type="text" >
+                                                    <input id="source" name="source" size="35" type="text" >
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientname">Назва Клієнта :</label>
-                                                    <input id="clientname" name="clientname" size="60" type="text" >
+                                                    <input id="clientname" name="clientname" size="35" type="text" >
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientaddr">Адреса Клієнта :</label>
-                                                    <input id="clientaddr" name="clientaddr" size="60" type="text" >
+                                                    <input id="clientaddr" name="clientaddr" size="35" type="text" >
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientemail">E-mail Клієнта :</label>
-                                                    <input id="clientemail" name="clientemail" size="60" type="text" placeholder="asdasfg@gmail.com" >
+                                                    <input id="clientemail" name="clientemail" size="35" type="text" placeholder="asdasfg@gmail.com" >
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientphonetocheck">Тел. Клієнта :</label>
-                                                    <input id="clientphonetocheck" name="clientphonetocheck" size="60" type="text" pattern="[0-9,]{12,}" placeholder="3806542833" >
+                                                    <input id="clientphonetocheck" name="clientphonetocheck" size="35" type="text" pattern="[0-9,]{12,}" placeholder="3806542833" >
                                                 </div>
                                                 <div class="field">
                                                     <label for="contactperson">Контакт. особа :</label>
-                                                    <input id="contactperson" name="contactperson" size="60" type="text" >
+                                                    <input id="contactperson" name="contactperson" size="35" type="text" >
                                                 </div>
                                                 <div class="form-group">
                                                     <select class="custom-select">
@@ -140,7 +141,7 @@
                                                     </select>
                                                 </div>
                                                 <div>
-                                                    <textarea name="entrynote" cols="82" rows="3" placeholder=""></textarea>
+                                                    <textarea name="entrynote" cols="58" rows="3" placeholder=""></textarea>
                                                 </div>
                                                 <div class="form-group">
                                                     <select name="clientreaction" class="custom-select">
@@ -155,7 +156,7 @@
                                                 </div>
                                                 <div class="field">
                                                     <label for="recallfield">Коли передзвон: </label>
-                                                    <input id="recallfield" name="recalltime" class="hasDatepicker" autocomplete="off" value="2016-10-04 16:02" size="60" type="text" >
+                                                    <input id="recallfield" name="recalltime" class="hasDatepicker" autocomplete="off" value="2016-10-04 16:02" size="35" type="text" >
                                                 </div>
                                                 <br>
                                                 <button type="button" class="btn btn-info" name="action" value="saverecall">Передзвонити </button>
@@ -166,6 +167,18 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-5 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-2">
+                                            <button id="read_remark_to_comments" type="button" class="btn btn-outline-warning">Зауваження</button>
+                                        </div>
+                                        <div class="card-body">
+                                            <span>SMS :</span>
+                                            <a href="/cgi-bin/readsms.php?DBF54EGbvbeaeUIE765f5=bkguiiueefFV76539394UB8uhuF" target="_blank"></a>
+                                            <button id="getRECIVEsms" type="button" class="btn btn-outline-info" value>Читати</button>
+                                            <button id="sendsms" type="button" class="btn btn-outline-info" value>Надіслати</button>
+                                            <button id="waitsms" type="button" class="btn btn-outline-info" value>Чекати</button>
+                                        </div>
+                                    </div>
                                     <!-- Illustrations -->
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-2">
@@ -173,7 +186,7 @@
 									</h6>
                                         </div>
                                         <div class="card-body">
-                                            <textarea form="anketaform" name="manager_comment" cols="68" rows="4" maxlength="240" placeholder="Власні нотатки"></textarea>
+                                            <textarea form="anketaform" name="manager_comment" cols="38" rows="4" maxlength="240" placeholder="Власні нотатки"></textarea>
                                         </div>
                                     </div>
                                     <!-- Approach -->
@@ -183,7 +196,7 @@
 									</h6>
                                         </div>
                                         <div class="card-body">
-                                            <textarea id="agent_script_note" cols="68" rows="6" readonly></textarea>
+                                            <textarea id="agent_script_note" cols="38" rows="6" readonly></textarea>
                                         </div>
                                     </div>
                                 </div>
