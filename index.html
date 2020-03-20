@@ -10,12 +10,13 @@
         <link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
         <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
     </head>
     <body class="container" id="page-top">
-        <!-- Page Wrapper -->
-        <div id="wrapper">
-            <!-- Sidebar -->
-            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <input type="checkbox" id="nav-toggle" hidden>
+        <nav class="nav">
+            <label for="nav-toggle" class="nav-toggle" onclick></label>
+            <ul class=" sidebar sidebar-dark accordion" id="accordionSidebar">
                 <!-- Sidebar - Brand -->
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon rotate-n-15">
@@ -27,41 +28,45 @@
                 <hr class="sidebar-divider my-0"/>
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">
+                    <div class="nav-link" href="index.html">
                         <i class="fas fa-fw fa-tachometer-alt"></i>
                         <span style="font-size: 12pt">Особиста статистика</span>
-                    </a>
+                    </div>
                 </li>
                 <!-- Divider -->
-                <hr class="sidebar-divider"/>
                 <li class="nav-item active">
-                    <a class="nav-link">
+                    <div class="nav-link">
                         <i class="fas fa-envelope"></i>
                         <span style="font-size: 12pt">Анкет - 0</span>
-                        <br>
+                        <br/>
                         <i class="fab fa-hotjar"></i>
                         <span style="font-size: 12pt">Теплих - 0 </span>
-                        <br>
+                        <br/>
                         <i class="fas fa-user-plus"></i>
                         <span style="font-size: 12pt">Зацікавлених - </span>
+                        
                         <br>
-                        <i class="fas fa-list"></i>
-                        <span style="font-size: 12pt">Список продактів - </span>
-                        <hr>
                         <i class="fas fa-exchange-alt"></i>
                         <span style="font-size: 12pt">Трансфери :</span>
-                        <hr>
-                        <button name="txaction" value="1004" type="button" class="btn btn-success">ТРАНСФЕР(1004)</button>
-                        <hr>
-                        <button name="txaction" value="1002" type="button" class="btn btn-success">ТРАНСФЕР(1002)</button>
-                        <hr>
-                        <button name="txaction" value="380322443132" type="button" class="btn btn-success">380322443132</button>
-                        <hr>
-                        <button name="txaction" value="380506677357" type="button" class="btn btn-success">380506677357</button>
-                    </a>
+                      
+                        <button name="txaction" value="1004" type="button" class="btn btn-success">ТРАНСФЕР(1004)
+            </button>
+                        <hr/>
+                        <button name="txaction" value="1002" type="button" class="btn btn-success">ТРАНСФЕР(1002)
+            </button>
+                        <hr/>
+                        <button name="txaction" value="380322443132" type="button" class="btn btn-success">380322443132
+            </button>
+                        <hr/>
+                        <button name="txaction" value="380506677357" type="button" class="btn btn-success">380506677357
+            </button><br>
+                        <i class="fas fa-list"></i>
+                        <span style="font-size: 12pt">Список продактів - </span>
+                    </div>
                 </li>
-                <hr class="sidebar-divider d-none d-md-block"/>
             </ul>
+        </nav>
+        <div id="wrapper">
             <div id="content-wrapper" class="d-flex flex-column">
                 <div id="content">
                     <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
@@ -83,10 +88,14 @@
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 class="h3 mb-0 text-gray-800">Таск - 8</h1>
-                                <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                                    <i class="fas fa-undo fa-sm text-white-50"></i>
-                                    Оновити   
                                 
+                                <button id="read_remark_to_comments" type="button" class="btn btn-warning">Зауваження</button>
+                                <a href="/cgi-bin/agentgettarget.pl?14&8" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                                    
+                                    <i class="fas fa-undo fa-sm text-white-50"></i>
+                                    Оновити
+
+							
                                 </a>
                             </div>
                             <!-- Content Row -->
@@ -97,39 +106,38 @@
                                 <div class="col-lg-7 mb-4">
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-3">
-                                            <button name="action" class="btn btn-outline-danger" value="noanswer">НЕ ВІДПОВІВ</button>
-                                            <button name="action" class="btn btn-outline-danger" value="wrongnumber">НЕВІРНИЙ №</button>
-                                            <button name="action" class="btn btn-outline-danger" value="salfwrongname">НЕВІРНА АНКЕТА</button>
-                                            <hr>
-                                            <button name="action" class="btn btn-outline-danger" value="noanswer_rc">ПІЗНІШЕ </button>
-                                            <button name="action" class="btn btn-outline-danger" value="double">ДУБЛЬ</button>
-                                            <button name="action" class="btn btn-outline-danger" value="liquidated">ЛІКВІДОВАНІ</button>
+                                            <button name="action" class="btn btn-outline-danger btn-sm" value="noanswer">НЕ ВІДПОВІВ</button>
+                                            <button name="action" class="btn btn-outline-danger btn-sm" value="wrongnumber">НЕВІРНИЙ №</button>
+                                            <button name="action" class="btn btn-outline-danger btn-sm" value="salfwrongname">НЕВІРНА АНКЕТА</button>
+                                            <button name="action" class="btn btn-outline-danger btn-sm" value="noanswer_rc">ПІЗНІШЕ </button>
+                                            <button name="action" class="btn btn-outline-danger btn-sm" value="double">ДУБЛЬ</button>
+                                            <button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">ЛІКВІДОВАНІ</button>
                                         </div>
                                         <div class="card-body">
                                             <div class="main">
                                                 <div class="field">
                                                     <label for="source">Джерело :</label>
-                                                    <input id="source" name="source" size="35" type="text" >
+                                                    <input id="source" name="source" size="35" type="text">
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientname">Назва Клієнта :</label>
-                                                    <input id="clientname" name="clientname" size="35" type="text" >
+                                                    <input id="clientname" name="clientname" size="35" type="text">
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientaddr">Адреса Клієнта :</label>
-                                                    <input id="clientaddr" name="clientaddr" size="35" type="text" >
+                                                    <input id="clientaddr" name="clientaddr" size="35" type="text">
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientemail">E-mail Клієнта :</label>
-                                                    <input id="clientemail" name="clientemail" size="35" type="text" placeholder="asdasfg@gmail.com" >
+                                                    <input id="clientemail" name="clientemail" size="35" type="text" placeholder="asdasfg@gmail.com">
                                                 </div>
                                                 <div class="field">
                                                     <label for="clientphonetocheck">Тел. Клієнта :</label>
-                                                    <input id="clientphonetocheck" name="clientphonetocheck" size="35" type="text" pattern="[0-9,]{12,}" placeholder="3806542833" >
+                                                    <input id="clientphonetocheck" name="clientphonetocheck" size="35" type="text" pattern="[0-9,]{12,}" placeholder="3806542833">
                                                 </div>
                                                 <div class="field">
                                                     <label for="contactperson">Контакт. особа :</label>
-                                                    <input id="contactperson" name="contactperson" size="35" type="text" >
+                                                    <input id="contactperson" name="contactperson" size="35" type="text">
                                                 </div>
                                                 <div class="form-group">
                                                     <select class="custom-select">
@@ -156,7 +164,7 @@
                                                 </div>
                                                 <div class="field">
                                                     <label for="recallfield">Коли передзвон: </label>
-                                                    <input id="recallfield" name="recalltime" class="hasDatepicker" autocomplete="off" value="2016-10-04 16:02" size="35" type="text" >
+                                                    <input id="recallfield" name="recalltime" class="hasDatepicker" autocomplete="off" value="2016-10-04 16:02" size="35" type="text">
                                                 </div>
                                                 <br>
                                                 <button type="button" class="btn btn-info" name="action" value="saverecall">Передзвонити </button>
@@ -169,7 +177,7 @@
                                 <div class="col-lg-5 mb-4">
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-2">
-                                            <button id="read_remark_to_comments" type="button" class="btn btn-outline-warning">Зауваження</button>
+                                            
                                         </div>
                                         <div class="card-body">
                                             <span>SMS :</span>
@@ -180,10 +188,10 @@
                                         </div>
                                     </div>
                                     <!-- Illustrations -->
+                           
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-2">
-                                            <h6 class="m-0 font-weight-bold text-primary">Для нотатків
-									</h6>
+                                            <h6 class="m-0 font-weight-bold text-primary">Для нотатків</h6>
                                         </div>
                                         <div class="card-body">
                                             <textarea form="anketaform" name="manager_comment" cols="38" rows="4" maxlength="240" placeholder="Власні нотатки"></textarea>
@@ -192,13 +200,21 @@
                                     <!-- Approach -->
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-2">
-                                            <h6 class="m-0 font-weight-bold text-primary">Записи скріптів
-									</h6>
+                                            <h6 class="m-0 font-weight-bold text-primary">Записи скрипту</h6>
                                         </div>
                                         <div class="card-body">
                                             <textarea id="agent_script_note" cols="38" rows="6" readonly></textarea>
                                         </div>
                                     </div>
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-2">
+                                            <h6 class="m-0 font-weight-bold text-primary">Записи спінів</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <textarea id="agent_spin" cols="38" rows="6" readonly></textarea>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -217,5 +233,13 @@
             </div>
             <!-- End of Content Wrapper -->
         </div>
+        	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
+	</script>
     </body>
 </html>
