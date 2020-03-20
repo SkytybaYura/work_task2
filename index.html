@@ -1,158 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-        <meta name="description" content=""/>
-        <meta name="author" content=""/>
-        <title>SB Admin</title>
-        <link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet'/>
-        <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="css/index.css">
-        <link rel="stylesheet" href="css/bootstrap.css">
-    </head>
-    <body class="container" id="page-top">
-        <input type="checkbox" id="nav-toggle" hidden>
-        <nav class="nav">
-            <label for="nav-toggle" class="nav-toggle" onclick></label>
-            <ul class=" sidebar sidebar-dark accordion" id="accordionSidebar">
-                <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                    <div class="sidebar-brand-icon rotate-n-15">
-                        <i class="fas fa-laugh-wink"></i>
-                    </div>
-                    <div class="sidebar-brand-text mx-3">SB Admin</div>
-                </a>
-                <!-- Divider -->
-                <hr class="sidebar-divider my-0"/>
-                <!-- Nav Item - Dashboard -->
-                <li class="nav-item active">
-                    <div class="nav-link" href="index.html">
-                        <i class="fas fa-fw fa-tachometer-alt"></i>
-                        <span style="font-size: 12pt">Особиста статистика</span>
-                    </div>
-                </li>
-                <!-- Divider -->
-                <li class="nav-item active">
-                    <div class="nav-link">
-                        <i class="fas fa-envelope"></i>
-                        <span style="font-size: 12pt">Анкет - 0</span>
-                        <br/>
-                        <i class="fab fa-hotjar"></i>
-                        <span style="font-size: 12pt">Теплих - 0 </span>
-                        <br/>
-                        <i class="fas fa-user-plus"></i>
-                        <span style="font-size: 12pt">Зацікавлених - </span>
-                        
-                        <br>
-                        <i class="fas fa-exchange-alt"></i>
-                        <span style="font-size: 12pt">Трансфери :</span>
-                      
-                        <button name="txaction" value="1004" type="button" class="btn btn-success">ТРАНСФЕР(1004)
-            </button>
-                        <hr/>
-                        <button name="txaction" value="1002" type="button" class="btn btn-success">ТРАНСФЕР(1002)
-            </button>
-                        <hr/>
-                        <button name="txaction" value="380322443132" type="button" class="btn btn-success">380322443132
-            </button>
-                        <hr/>
-                        <button name="txaction" value="380506677357" type="button" class="btn btn-success">380506677357
-            </button><br>
-                        <i class="fas fa-list"></i>
-                        <span style="font-size: 12pt">Список продактів - </span>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <div id="wrapper">
-            <div id="content-wrapper" class="d-flex flex-column">
-                <div id="content">
-                    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                        <!-- Topbar Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <div class="topbar-divider d-none d-sm-block"></div>
-                            <!-- Nav Item - User Information -->
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link dropdown-toggle" href="#" onclick="Main" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-sign-out-alt ">На Головну</i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- End of Topbar -->
-                    <!-- Begin Page Content -->
-                    <form id="anketaform" name="anketaform" method="POST" action="/cgi-bin/agentgettarget.pl?14&8">
-                        <div class="container-fluid">
-                            <!-- Page Heading -->
-                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h1 class="h3 mb-0 text-gray-800">Таск - 8</h1>
-                                
-                                <button id="read_remark_to_comments" type="button" class="btn btn-warning">Зауваження</button>
-                                <a href="/cgi-bin/agentgettarget.pl?14&8" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-                                    
-                                    <i class="fas fa-undo fa-sm text-white-50"></i>
-                                    Оновити
 
-							
-                                </a>
-                            </div>
-                            <!-- Content Row -->
-                            <div class="row"></div>
-                            <!-- Content Row -->
-                            <div class="row">
-                                <!-- Content Column -->
-                                <div class="col-lg-7 mb-4">
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-3">
-                                            <button name="action" class="btn btn-outline-danger btn-sm" value="noanswer">НЕ ВІДПОВІВ</button>
-                                            <button name="action" class="btn btn-outline-danger btn-sm" value="wrongnumber">НЕВІРНИЙ №</button>
-                                            <button name="action" class="btn btn-outline-danger btn-sm" value="salfwrongname">НЕВІРНА АНКЕТА</button>
-                                            <button name="action" class="btn btn-outline-danger btn-sm" value="noanswer_rc">ПІЗНІШЕ </button>
-                                            <button name="action" class="btn btn-outline-danger btn-sm" value="double">ДУБЛЬ</button>
-                                            <button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">ЛІКВІДОВАНІ</button>
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="main">
-                                                <div class="field">
-                                                    <label for="source">Джерело :</label>
-                                                    <input id="source" name="source" size="35" type="text">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>SB Admin</title>
+	<link crossorigin='anonymous' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css'
+		integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' rel='stylesheet' />
+	<link href="css/sb-admin-2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body class="container" id="page-top">
+	<input type="checkbox" id="nav-toggle" hidden>
+	<nav class="nav">
+		<label for="nav-toggle" class="nav-toggle" onclick></label>
+		<ul class=" sidebar sidebar-dark accordion" id="accordionSidebar">
+			<!-- Sidebar - Brand -->
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+				<div class="sidebar-brand-icon rotate-n-15">
+					<i class="fas fa-laugh-wink"></i>
+				</div>
+				<div class="sidebar-brand-text mx-3">SB Admin</div>
+			</a>
+			<!-- Divider -->
+			<hr class="sidebar-divider my-0" />
+			<!-- Nav Item - Dashboard -->
+			<li class="nav-item active">
+				<div class="nav-link" href="index.html">
+					<i class="fas fa-fw fa-tachometer-alt"></i>
+					<span style="font-size: 12pt">Особиста статистика</span>
+				</div>
+			</li>
+			<!-- Divider -->
+			<li class="nav-item active">
+				<div class="nav-link">
+					<i class="fas fa-envelope"></i>
+					<span style="font-size: 12pt">Анкет - 0</span>
+					<br/>
+					<i class="fab fa-hotjar"></i>
+					<span style="font-size: 12pt">Теплих - 0 </span>
+					<br/>
+					<i class="fas fa-user-plus"></i>
+					<span style="font-size: 12pt">Зацікавлених - </span>
+
+					<br>
+					<i class="fas fa-exchange-alt"></i>
+					<span style="font-size: 12pt">Трансфери :</span>
+
+					<button name="txaction" value="1004" type="button" class="btn btn-success btn-sm">ТРАНСФЕР(1004)
+            </button>
+					<hr />
+					<button name="txaction" value="1002" type="button" class="btn btn-success btn-sm">ТРАНСФЕР(1002)
+            </button>
+					<hr />
+					<button name="txaction" value="380322443132" type="button" class="btn btn-success btn-sm">380322443132
+            </button>
+					<hr />
+					<button name="txaction" value="380506677357" type="button" class="btn btn-success btn-sm">380506677357
+            </button>
+					<hr>
+					<i class="fas fa-list"></i>
+					<span style="font-size: 12pt">Список продактів - </span>
+				</div>
+			</li>
+		</ul>
+	</nav>
+	<div id="wrapper">
+		<div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+					<h1 class="h3 mb-0 text-gray-800">Таск - 8</h1>&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                  
+					<ul class="navbar-nav ml-auto">
+						<div class="topbar-divider d-none d-sm-block"></div>
+						<!-- Nav Item - User Information -->
+						<li class="nav-item dropdown no-arrow">
+							<a class="nav-link dropdown-toggle" href="#" onclick="Main" id="userDropdown" role="button"
+								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-sign-out-alt ">На Головну</i>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- End of Topbar -->
+				<!-- Begin Page Content -->
+				<form id="anketaform" name="anketaform" method="POST" action="/cgi-bin/agentgettarget.pl?14&8">
+					<div class="container-fluid">
+						<!-- Page Heading -->
+						<div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+
+							<button id="read_remark_to_comments" type="button" class="btn btn-warning btn-sm">Зауваження</button>
+							<a href="/cgi-bin/agentgettarget.pl?14&8"
+								class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+								<i class="fas fa-undo fa-sm text-white-50"></i>
+								Оновити
+							</a>
+						</div>
+						<!-- Content Row -->
+						<div class="row"></div>
+						<!-- Content Row -->
+						<div class="row">
+							<!-- Content Column -->
+							<div class="col-lg-7 mb-4">
+								<div class="card shadow mb-4">
+									<div class="card-header py-3">
+										<button name="action" class="btn btn-outline-danger btn-sm" value="noanswer">НЕ ВІДПОВІВ</button>
+										<button name="action" class="btn btn-outline-danger btn-sm" value="wrongnumber">НЕВІРНИЙ №</button>
+										<button name="action" class="btn btn-outline-danger btn-sm" value="salfwrongname">НЕВІРНА АНКЕТА</button>
+										<button name="action" class="btn btn-outline-danger btn-sm" value="noanswer_rc">ПІЗНІШЕ </button>
+										<button name="action" class="btn btn-outline-danger btn-sm" value="double">ДУБЛЬ</button>
+										<button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">ЛІКВІДОВАНІ</button>
+									</div>
+									<div class="card-body">
+										<div class="main">
+												<div class="field">
+													<label for="clientname">Назва Клієнта :</label>
+													<input id="clientname" name="clientname" size="35" type="text">
                                                 </div>
-                                                <div class="field">
-                                                    <label for="clientname">Назва Клієнта :</label>
-                                                    <input id="clientname" name="clientname" size="35" type="text">
+													<div class="field">
+														<label for="clientaddr">Адреса Клієнта :</label>
+														<input id="clientaddr" name="clientaddr" size="35" type="text">
                                                 </div>
-                                                <div class="field">
-                                                    <label for="clientaddr">Адреса Клієнта :</label>
-                                                    <input id="clientaddr" name="clientaddr" size="35" type="text">
+														<div class="field">
+															<label for="clientemail">E-mail Клієнта :</label>
+															<input id="clientemail" name="clientemail" size="35" type="text" placeholder="asdasfg@gmail.com">
                                                 </div>
-                                                <div class="field">
-                                                    <label for="clientemail">E-mail Клієнта :</label>
-                                                    <input id="clientemail" name="clientemail" size="35" type="text" placeholder="asdasfg@gmail.com">
+															<div class="field">
+																<label for="clientphonetocheck">Тел. Клієнта :</label>
+																<input id="clientphonetocheck" name="clientphonetocheck" size="35" type="text" pattern="[0-9,]{12,}" placeholder="3806542833">
                                                 </div>
-                                                <div class="field">
-                                                    <label for="clientphonetocheck">Тел. Клієнта :</label>
-                                                    <input id="clientphonetocheck" name="clientphonetocheck" size="35" type="text" pattern="[0-9,]{12,}" placeholder="3806542833">
+																<div class="field">
+																	<label for="contactperson">Контакт. особа :</label>
+																	<input id="contactperson" name="contactperson" size="35" type="text">
                                                 </div>
-                                                <div class="field">
-                                                    <label for="contactperson">Контакт. особа :</label>
-                                                    <input id="contactperson" name="contactperson" size="35" type="text">
-                                                </div>
-                                                <div class="form-group">
-                                                    <select class="custom-select">
+																	<div class="form-group">
+																		<select class="custom-select">
                                                         <option selected="">Виберіть додаткову інформанцію</option>
                                                         <option id="noteselect1" value>Пропозиції роз...</option>
                                                         <option id="noteselect2" value>Зацікавляться ...</option>
                                                         <option id="noteselect3" value>Розмова з ОПР ...</option>
                                                         <option id="noteselect4" value>Спілкувались з </option>
                                                     </select>
-                                                </div>
-                                                <div>
-                                                    <textarea name="entrynote" cols="58" rows="3" placeholder=""></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <select name="clientreaction" class="custom-select">
+																	</div>
+																	<div>
+																		<textarea name="entrynote" cols="58" rows="3" placeholder="передзвонити КОНТАКТУВАЛИ: 2016-03-23"></textarea>
+																	</div>
+																	<div class="form-group">
+																		<select name="clientreaction" class="custom-select">
                                                         <option selected="">Виберіть реакцію: </option>
                                                         <option value="interested">Зацікавлений</option>
                                                         <option value="warm">Теплий</option>
@@ -161,79 +162,99 @@
                                                         <option value="prejudiced">Упереджений</option>
                                                         <option value="wrongposition">Хибне позиціонування</option>
                                                     </select>
+																	</div>
+																	<div class="field">
+																		<label for="recallfield">Коли передзвон: </label>
+																		<input id="recallfield" name="recalltime" class="hasDatepicker" autocomplete="off" value="2016-10-04 16:02" size="35" type="text">
                                                 </div>
-                                                <div class="field">
-                                                    <label for="recallfield">Коли передзвон: </label>
-                                                    <input id="recallfield" name="recalltime" class="hasDatepicker" autocomplete="off" value="2016-10-04 16:02" size="35" type="text">
-                                                </div>
-                                                <br>
-                                                <button type="button" class="btn btn-info" name="action" value="saverecall">Передзвонити </button>
-                                                <hr>
-                                                <button style="float:right" type="button" class="btn btn-primary btn-lg" name="action" value="saveanketa">ЗБЕРЕГТИ АНКЕТУ</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 mb-4">
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                            
-                                        </div>
-                                        <div class="card-body">
-                                            <span>SMS :</span>
-                                            <a href="/cgi-bin/readsms.php?DBF54EGbvbeaeUIE765f5=bkguiiueefFV76539394UB8uhuF" target="_blank"></a>
-                                            <button id="getRECIVEsms" type="button" class="btn btn-outline-info" value>Читати</button>
-                                            <button id="sendsms" type="button" class="btn btn-outline-info" value>Надіслати</button>
-                                            <button id="waitsms" type="button" class="btn btn-outline-info" value>Чекати</button>
-                                        </div>
-                                    </div>
-                                    <!-- Illustrations -->
-                           
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                            <h6 class="m-0 font-weight-bold text-primary">Для нотатків</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <textarea form="anketaform" name="manager_comment" cols="38" rows="4" maxlength="240" placeholder="Власні нотатки"></textarea>
-                                        </div>
-                                    </div>
-                                    <!-- Approach -->
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                            <h6 class="m-0 font-weight-bold text-primary">Записи скрипту</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <textarea id="agent_script_note" cols="38" rows="6" readonly></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                            <h6 class="m-0 font-weight-bold text-primary">Записи спінів</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <textarea id="agent_spin" cols="38" rows="6" readonly></textarea>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <!-- End of Main Content -->
-                <!-- Footer -->
-                <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span></span>
-                        </div>
-                    </div>
-                </footer>
-                <!-- End of Footer -->
-            </div>
-            <!-- End of Content Wrapper -->
-        </div>
-        	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+																		<br>
+																		<button type="button" class="btn btn-info btn-sm" name="action" value="saverecall">Передзвонити </button>
+																		<hr>
+																		<button style="float:right" type="button" class="btn btn-primary btn-lg" name="action" value="saveanketa">ЗБЕРЕГТИ АНКЕТУ</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-lg-5 mb-4">
+															<div class="card shadow mb-4">
+																<div class="card-header py-2">                                                                   
+												                    <span>Джерело :</span>
+                                                                    <span name="source" value></span>
+																</div>
+																<div class="card-body">
+																	<span>SMS :</span>
+																	<a href="/cgi-bin/readsms.php?DBF54EGbvbeaeUIE765f5=bkguiiueefFV76539394UB8uhuF"
+																		target="_blank"></a>
+																	<button id="getRECIVEsms" type="button" class="btn btn-outline-info btn-sm" value>Читати</button>
+																	<button id="sendsms" type="button" class="btn btn-outline-info btn-sm" value>Надіслати</button>
+																	<button id="waitsms" type="button" class="btn btn-outline-info btn-sm" value>Чекати</button>
+																</div>
+															</div>
+															<!-- Illustrations -->
+
+															<div class="card shadow mb-4">
+																<div class="card-header py-2">
+																	<h6 class="m-0 font-weight-bold text-primary">Для
+																		нотатків</h6>
+																</div>
+																<div class="card-body">
+																	<textarea form="anketaform" name="manager_comment" cols="38" rows="3" maxlength="240" placeholder="Власні нотатки"></textarea>
+																</div>
+															</div>
+															<!-- Approach -->
+															<div class="card shadow mb-4">
+																<div class="card-header py-2">
+																	<h6 class="m-0 font-weight-bold text-primary">Записи
+																		скрипту</h6>
+																</div>
+																<div class="card-body">
+																	<span id="agent_script_note" cols="38" rows="6" ></span>
+																</div>
+															</div>
+															<div class="card shadow mb-4">
+																<div class="card-header py-2">
+																	<h6 class="m-0 font-weight-bold text-primary">Записи
+																		спінів</h6>
+																</div>
+																<div class="card-body">
+																	<span id="agent_spin" cols="38" rows="6" ></span>
+																</div>
+															</div>
+                                                            
+														</div>
+													</div>
+												</div>
+				</form>
+			</div>
+			<!-- End of Main Content -->
+			<!-- Footer -->
+			<footer class="sticky-footer bg-white">
+				<div class="container my-auto">
+					<div class="copyright text-center my-auto">
+						<span></span>
+					</div>
+				</div>
+			</footer>
+			<!-- End of Footer -->
+		</div>
+		<!-- End of Content Wrapper -->
+	</div>
+        <!-- <script>
+            jQuery(function() {
+                jQuery("#recallfield").datetimepicker({
+                    hourGrid: 1,
+                    minuteGrid: 10,
+                    hourMin: 8,
+                    hourMax: 20,
+                    firstDay: 1,
+                    dateFormat: "yy-mm-dd",
+                    showAnim: "",
+                    dayNamesMin: ["Неділя", "Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота"]
+                });
+                jQuery('#ui-datepicker-div').draggable();
+            });
+        </script> -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
 		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous">
@@ -241,5 +262,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
 		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous">
 	</script>
-    </body>
+</body>
+
 </html>
