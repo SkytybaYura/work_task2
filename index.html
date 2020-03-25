@@ -87,6 +87,7 @@
                         <div class="container-fluid">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                 <button id="" type="button" class="btn btn-success btn-sm">Прослухати себе</button>
                                 <button id="read_remark_to_comments" type="button" class="btn btn-warning btn-sm">Зауваження</button>
                                 <a href="/cgi-bin/agentgettarget.pl?14&8" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                                     <i class="fas fa-undo fa-sm text-white-50"></i>
@@ -94,15 +95,14 @@
                                 </a>
                             </div>
                             <!-- Content Row -->
-                            <div class="row"></div>
+                          
                             <!-- Content Row -->
                             <div class="row">
                                 <!-- Content Column -->
                                 <div class="col-lg-7 mb-4">
                                     <div class="card shadow mb-4">
                                         <div class="card-header py-3">
-                                            <span>Анкета ID:</span>
-                                          
+                                            <span>Анкета ID:</span>         
                                         </div>
                                         <div class="card-body">
                                             <div class="main">
@@ -125,11 +125,74 @@
                                                 <div>
                                                     <textarea name="entrynote" cols="58" rows="2" placeholder="передзвонити КОНТАКТУВАЛИ: 2016-03-23"></textarea>
                                                 </div>
-                                                
-                                                <span>Номера</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mb-4">
+                                    <div class="card shadow mb-4">
+                                        
+                                           <div class="accordion">
+                                            <section class="accordion_item">
+                                                <h3 class="title_block">Spin</h3>
+                                                <div class="info">
+                                                    <p class="info_item">ЗАПИТАННЯ - як часто була необхідність або проблема з</p>
+
+                                                </div>
+                                            </section>
+                                            <section class="accordion_item">
+                                                <h3 class="title_block">Script</h3>
+                                                <div class="info">
+                                                    <p class="info_item">ЗАПИТАННЯ - як часто була необхідність або проблема з</p>
+                                                  
+                                                </div>
+                                            </section>
+                                            <section class="accordion_item">
+                                                <h3 class="title_block">Plus info</h3>
+                                                <div class="info">
+                                                    <p class="info_item">ЗАПИТАННЯ - як часто була необхідність або проблема з</p>
+                                                  
+                                                </div>
+                                            </section>
+                                            <section class="accordion_item">
+                                                <h3 class="title_block">Notatku</h3>
+                                                <div class="info">
+                                                    <textarea form="anketaform" name="manager_comment" cols="38" rows="3" maxlength="240" placeholder="Власні нотатки" readonly></textarea>
+                                                  
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <div class="card-body">
+                                          
+                                          
+                                           
+                                        </div>
+                                     
+                                    </div>
+                                    <!-- Illustrations -->
+                                    <!-- Approach -->
+                                   
+                                    <!-- <div class="card shadow mb-4">
+                                        <div class="card-header py-2">
+                                           
+                                        </div>
+                                        <div class="card-body">
+                                           
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>  
+                             <div class="row">
+                                <!-- Content Column -->
+                                <div class="col-lg-7 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <span class="click btn btn-outline btn-sm">Номера :</span>
                                                   <button type="button" class="btn btn-outline-info btn-sm">3806542833    </button>
-                                                  <button type="button" class="btn btn-outline-info btn-sm">3806542833    </button>
-                                                <hr>
+                                                  <button type="button" class="btn btn-outline-info btn-sm">3806542833    </button>     
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="main">
                                                 <button name="action" class="btn btn-outline-danger btn-sm" value="noanswer">НЕ ВІДПОВІВ</button>
                                                 <button name="action" class="btn btn-outline-danger btn-sm" value="wrongnumber">НЕВІРНИЙ №</button>
                                                 <button name="action" class="btn btn-outline-danger btn-sm" value="salfwrongname">НЕВІРНА АНКЕТА</button>
@@ -137,9 +200,61 @@
                                                 <button name="action" class="btn btn-outline-danger btn-sm" value="double">ДУБЛЬ</button>
                                                 <button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">ЛІКВІДОВАНІ</button>
                                                 <button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">АКТУАЛЬНО</button>
-                                                <button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">НЕ АКТУАЛЬНО</button>
-                                                <br>
-                                                <hr>
+                                                <button name="action" class="btn btn-outline-danger btn-sm" value="liquidated">НЕ АКТУАЛЬНО</button><br><hr>
+                                                <div class="field">
+                                                    <label for="addnumber">Додати номер:</label>
+                                                    <input id="addnumber" name="addnumber" size="35" type="text">
+                                                    <span class="btn btn-success btn-sm">Додати</span>
+                                                </div>
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 mb-4">
+                               
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-2">
+                                            <span>Джерело :</span>
+                                            <span name="source" value></span>
+                                            <br>
+                                            <br>
+                                            <span>Категорії :</span>
+                                            <span name="source" value></span>
+                                        </div>
+                                        <div class="card-body">
+                                           <h6 class="m-0 font-weight-bold text-primary">Для нотатків</h6>
+                                            <br>
+                                            <textarea form="anketaform" name="manager_comment" cols="38" rows="3" maxlength="240" placeholder="Власні нотатки"></textarea>
+                                            
+                                         
+                                           
+                                                
+                                                
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- <div class="card shadow mb-4">
+                                        <div class="card-header py-2">
+                                           
+                                        </div>
+                                        <div class="card-body">
+                                           
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                             <div class="row">
+                                <!-- Content Column -->
+                                <div class="col-lg-7 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <span>Повідомлення :</span>
+                                                   
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="main">
+                                            
                                                 <div class="field">
                                                     <label for="clientemail">E-mail Клієнта :</label>
                                                     <input id="clientemail" name="clientemail" size="30" type="text" placeholder="asdasfg@gmail.com">
@@ -151,7 +266,26 @@
                                                 <button id="getRECIVEsms" type="button" class="btn btn-outline-info btn-sm" value>Читати</button>
                                                 <button id="sendsms" type="button" class="btn btn-outline-info btn-sm" value>Надіслати</button>
                                                 <button id="waitsms" type="button" class="btn btn-outline-info btn-sm" value>Чекати</button>
-                                                <hr>
+
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            <div class="row">
+                                <!-- Content Column -->
+                                <div class="col-lg-7 mb-4">
+                                    <div class="card shadow mb-4">
+                                        <div class="card-header py-3">
+                                            <span>Номера :</span>
+                                                   
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="main">
+                                            
+                                       
                                                 <div class="form-group">
                                                     <select name="clientreaction" class="custom-select">
                                                         <option selected="">Виберіть реакцію: </option>
@@ -183,75 +317,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-5 mb-4">
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                            <span>Джерело :</span>
-                                            <span name="source" value></span>
-                                            <br>
-                                            <br>
-                                            <span>Категорії :</span>
-                                            <span name="source" value></span>
-                                        </div>
-                                        <div class="card-body">
-                                            <h6 class="m-0 font-weight-bold text-primary">Для нотатків</h6>
-                                            <br>
-                                            <textarea form="anketaform" name="manager_comment" cols="38" rows="3" maxlength="240" placeholder="Власні нотатки"></textarea>
-                                        </div>
-                                    </div>
-                                    <!-- Illustrations -->
-                                    <!-- Approach -->
-                                    <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                            <h6 class="m-0 font-weight-bold text-primary">Записи
-																	скрипту</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <span id="agent_script_note" cols="38" rows="6"></span>
-                                            <p>ЗАПИТАННЯ - як часто була необхідність або проблема з
-                                                термінами на проведення фундаментних робіт? - як часто є
-                                                необхідність вирішення питання будівництва на складних
-                                                ґрунтах? - коли останній раз доводилось працювати в
-                                                умовах, які не передбачають стандартне зведення
-                                                фундаментів? - чи є зараз об'єкт на стадії будівництва
-                                                або проектування, для представлення розрахунку?
-                                            </p>
-                                            <span class="click-jq btn btn-outline-danger btn-sm">Сховати скрипти</span>
-                                            <span id="agent_spin" cols="38" rows="6"></span>
-                                            <span class="btn btn-outline-info btn-sm" id="openDialog">Відкрити Спіпи   </span>
-                                            <dialog>
-                                                <div>Назва компанії Пілар - рішення в будівництві
-                                                швидкомонтоних фундаментів СФЕРИ ВИКОРИСТАННЯ 
-                                                - високий рівень гуртових вод - піщані, болотні, насипні
-                                                - рельєф складний - реконструкція існуючих УТП 
-                                                - геошурупи - будівництво швидкомонтованих фундаментів 
-                                                - без-бетонні фундаменти ЦА
-                                                - з будівництва   швидкомонтованих споруди 
-                                                - індивідуальне будівництво
-                                                -  будівельні компанії
-                                                - проектні компанії
-                                                - монтажні   компанії ОПР інженер, архітектор, конструктор = особа,
-                                                яка відповідає з конструктивні рішення в будівництв
-                                                ПЕРЕВАГИ + час монтажу + шум вібрація + можливість
-                                                роботи в умовах міста та цінної архітектурної забудови
-                                                + будівництво водоохоронній зоні. Будівництво в
-                                                паркових зонах... + "не належить" до капітального
-                                                будівництва ПРОРАХУНОК ++++
-                                                </div>
-                                                <div>
-                                                    <span class="btn btn-outline-danger btn-sm" id="closeDialog">Закрити вікно  </span>
-                                                </div>
-                                        </div>
-                                    </div>
-                                    <!-- <div class="card shadow mb-4">
-                                        <div class="card-header py-2">
-                                           
-                                        </div>
-                                        <div class="card-body">
-                                           
-                                        </div>
-                                    </div> -->
-                                </div>
+                               
+                            </div>
+
                     </form>
                 </div>
                 <!-- End of Main Content -->
