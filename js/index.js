@@ -12,6 +12,20 @@
 //     $('p').toggle(1000);
 // });  
  
+function ValidMail() {
+    let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+    let myMail = document.getElementById('clientemail').value;
+    let valid = re.test(myMail);
+    if (valid) output = 'E-mail введено правильно!';
+    else output = 'E-mail  введено неправильно!';
+    document.getElementById('message').innerHTML = output;
+    return valid;
+}
+
+$(function($){
+   $("#phone").mask("+38 (099) 999-9999");
+});
+
  ! function(i) {
  let o, n;
  i(".title_block").on("click", function() {
