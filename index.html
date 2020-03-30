@@ -13,6 +13,7 @@
 	<link href="css/sb-admin-2.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
+    
 </head>
 
 <body class="container" id="page-top">
@@ -63,14 +64,22 @@
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 					<h1 class="h3 mb-0 text-gray-800">Таск - 8</h1>
 					&nbsp;&nbsp;&nbsp;&nbsp;
-                    <h4 class="h5 mb-0 text-gray-800">Залишилось:  </h4>
+                    <h4 class="h5 mb-0 text-gray-800">Залишилось:  </h4>&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <h4 class="h5 mb-0 text-gray-800">Актуалізованих:  </h4>
+                    <h4 class="h5 mb-0 text-gray-800">Актуалізованих:  </h4>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="" type="button" class="btn btn-success btn-sm">Прослухати себе</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button id="read_remark_to_comments" type="button" class="btn btn-warning btn-sm">Зауваження</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="/cgi-bin/agentgettarget.pl?14&8"
+								class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" >
+								<i class="fas fa-undo fa-sm text-white-50"></i>
+								Оновити
+							</a>
+                    
 					<ul class="navbar-nav ml-auto">
 						<div class="topbar-divider d-none d-sm-block"></div>
 						<!-- Nav Item - User Information -->
 						<li class="nav-item dropdown no-arrow">
-							<a class="nav-link dropdown-toggle" href="#" onclick="Main" id="userDropdown" role="button"
+							<a class="nav-link dropdown-toggle" href="adasd.html" onclick="Main" id="userDropdown" role="button"
 								data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<i class="fas fa-sign-out-alt ">На Головну</i>
 							</a>
@@ -82,15 +91,7 @@
 				<form id="anketaform" name="anketaform" method="POST" action="/cgi-bin/agentgettarget.pl?14&8">
 					<div class="container-fluid">
 						<!-- Page Heading -->
-						<div class="d-sm-flex align-items-center justify-content-between mb-4">
-							<button id="" type="button" class="btn btn-success btn-sm">Прослухати себе</button>
-							<button id="read_remark_to_comments" type="button" class="btn btn-warning btn-sm">Зауваження</button>
-							<a href="/cgi-bin/agentgettarget.pl?14&8"
-								class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
-								<i class="fas fa-undo fa-sm text-white-50"></i>
-								Оновити
-							</a>
-						</div>
+						
 						<!-- Content Row -->
 
 						<!-- Content Row -->
@@ -137,9 +138,8 @@
 													</div>
 													<div class="card-body">
                                                       
-														<h6 class="m-0 font-weight-bold text-primary">Для нотатків</h6>
-														<br>
-														<textarea form="anketaform" name="manager_comment" cols="38" rows="3" maxlength="240" placeholder="Власні нотатки"></textarea>
+														
+														<textarea form="anketaform" name="manager_comment" cols="38" rows="3" maxlength="240" placeholder="Для власних нотаток"></textarea>
 														
 													</div>
                                                     </div>
@@ -190,11 +190,11 @@
 															</div>
 														</section>
 														<section class="accordion_item">
-															<h3 class="title_block">Повідомлення :</h3>
+															<h3 class="title_block">Робота з комерційними пропозиціями :</h3>
 															<div class="info">
 																<div class="main">
 																	 <div class="field">
-                                                                    <span class="btn btn-outline-success">КП1</span>
+                                                                    <span class="btn btn-success">КП1</span>
                                                                     <a href="">ДИВ КП1</a>&nbsp;&nbsp;
                                                                      <span class="btn btn-outline-primary">КП2</span>
                                                                     <a href="">ДИВ КП2</a>&nbsp;&nbsp;
@@ -207,7 +207,7 @@
                                                                         <p id="message" style="color:red; text-align:left"></p>
 																		<label for="clientemail">E-mail Клієнта :</label>
 																		<input id="clientemail" name="clientemail" size="30" type="text" placeholder="asdasfg@gmail.com">
-																		<span class="btn btn-success btn-sm" type="submit" value="Провірити" onClick="ValidMail();">Провірити</span>
+																		<span class="btn btn-success btn-sm" type="submit" value="Провірити" onClick="ValidMail();">Перевірити</span>
                                                                         <p id="message" style="color:red"></p>
                                                                      </div>
                                                                     <hr>
@@ -223,17 +223,30 @@
 														<section class="accordion_item">
 															<h3 class="title_block">Реакція :</h3>
 															<div class="info">
+                                                      
+                                                                <div id="tab" class="btn-group" data-toggle="buttons-radio">
+                                                                <a href="#" class="btn btn-danger active" data-toggle="tab">Зацікавлений</a>
+                                                                <a href="#" class="btn btn-danger" data-toggle="tab">Не зацікавлений</a>
+                                                                <a href="#" class="btn btn-danger" data-toggle="tab">Вже є клієнтом</a>
+                                                                <a href="#hot" class="btn btn-danger"  data-toggle="tab">Теплий</a> <br>
+                                                   
+                                                                </div>
+                                                                <hr>
+                                                                <div class="tab-content">
+                                                               
+                                                                <div class="tab-pane" id="hot">Contact Content</div>
+                                                                </div>
 																<div class="main">
 																	<div class="form-group">
 																		<select name="clientreaction" class="custom-select">
-                                                        <option selected="">Виберіть реакцію: </option>
-                                                        <option value="interested">Зацікавлений</option>
-                                                        <option value="warm">Теплий</option>
-                                                        <option value="notinterested">Не зацікавлений</option>
-                                                        <option value="alreadyclient">Вже є клієнтом</option>
-                                                        <option value="prejudiced">Упереджений</option>
-                                                        <option value="wrongposition">Хибне позиціонування</option>
-                                                    </select>
+                                                                    <option selected="">Виберіть реакцію: </option>
+                                                                    <option value="interested">Зацікавлений</option>
+                                                                    <option value="warm">Теплий</option>
+                                                                    <option value="notinterested">Не зацікавлений</option>
+                                                                    <option value="alreadyclient">Вже є клієнтом</option>
+                                                                    <option value="prejudiced">Упереджений</option>
+                                                                    <option value="wrongposition">Хибне позиціонування</option>
+                                                                </select>
 																	</div>
 																	<div class="form-group">
 																		<select class="custom-select">
@@ -273,7 +286,7 @@
 
 													<div class="accordion">
 														<section class="accordion_item">
-															<h3 class="title_block">Spin</h3>
+															<h3 class="title_block">Запитання</h3>
 															<div class="info">
 																<p class="info_item">ЗАПИТАННЯ - як часто була
 																	необхідність або проблема з</p>
@@ -281,7 +294,7 @@
 															</div>
 														</section>
 														<section class="accordion_item">
-															<h3 class="title_block">Script</h3>
+															<h3 class="title_block">Алгоритм розмови з компанією</h3>
 															<div class="info">
 																<p class="info_item">ЗАПИТАННЯ - як часто була
 																	необхідність або проблема з</p>

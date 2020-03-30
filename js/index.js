@@ -11,6 +11,7 @@
 // $('.click-jq').click(() => {
 //     $('p').toggle(1000);
 // });  
+
 (function($) {
 $(function() {
 
