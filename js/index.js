@@ -11,7 +11,17 @@
 // $('.click-jq').click(() => {
 //     $('p').toggle(1000);
 // });  
- 
+(function($) {
+$(function() {
+
+	$('#up').click(function() {
+		$('html, body').animate({scrollTop: 0},500);
+		return false;
+	})
+
+})
+})(jQuery) 
+
 function ValidMail() {
     let re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
     let myMail = document.getElementById('clientemail').value;
