@@ -34,7 +34,7 @@ function ValidMail() {
 }
 
 $(function($){
-   $("#phone").mask("+38 (099) 999-9999");
+   $("#phone").mask("38 099 999 9999");
 });
 
  ! function(i) {
